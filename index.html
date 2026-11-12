@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizUp | Test Your Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Quiz<span>Up.</span></div>
+        <div class="nav-text">Challenge Your Brain</div>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="hero">
+                <span class="tag">THE ULTIMATE QUIZ CHALLENGE</span>
+                <h1>Think Fast.<br><span>Score Big.</span></h1>
+                <p>Test your knowledge, challenge yourself and see how much you really know.</p>
+
+                <div class="stats">
+                    <div><strong>5</strong><small>Categories</small></div>
+                    <div><strong>30</strong><small>Questions</small></div>
+                    <div><strong>20–35 sec</strong><small>Per Question</small></div>
+                </div>
+
+                <h2>Choose Your Category</h2>
+
+                <div class="categories">
+                    <button class="category-card" data-category="gk">
+                        <span class="category-icon">🌍</span>
+                        <h3>General Knowledge</h3>
+                        <p>Test your awareness</p>
+                        <span class="play-label">Play Now →</span>
+                    </button>
+
+                    <button class="category-card" data-category="science">
+                        <span class="category-icon">🧪</span>
+                        <h3>Science</h3>
+                        <p>Explore scientific concepts</p>
+                        <span class="play-label">Play Now →</span>
+                    </button>
+
+                    <button class="category-card" data-category="computer">
+                        <span class="category-icon">💻</span>
+                        <h3>Computer Science</h3>
+                        <p>Challenge your tech knowledge</p>
+                        <span class="play-label">Play Now →</span>
+                    </button>
+
+                    <button class="category-card" data-category="math">
+                        <span class="category-icon">📐</span>
+                        <h3>Mathematics</h3>
+                        <p>Put your logic to the test</p>
+                        <span class="play-label">Play Now →</span>
+                    </button>
+
+                    <button class="category-card" data-category="sports">
+                        <span class="category-icon">⚽</span>
+                        <h3>Sports</h3>
+                        <p>Prove your sporting knowledge</p>
+                        <span class="play-label">Play Now →</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+
+            <div class="quiz-top">
+                <button id="exit-btn" class="text-btn">← Exit Quiz</button>
+                <div id="category-name">GENERAL KNOWLEDGE</div>
+                <div class="timer">⏱ <span id="timer">00:20</span></div>
+            </div>
+
+            <div class="progress-info">
+                <span id="question-count">Question 1 of 6</span>
+                <span id="answered-count">0 Answered</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-label">YOUR QUESTION</span>
+                <h2 id="question-text">Question appears here</h2>
+                <div id="options-container" class="options"></div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="prev-btn" class="secondary-btn" disabled>← Previous</button>
+                <button id="next-btn" class="primary-btn">Next →</button>
+                <button id="submit-btn" class="primary-btn hidden">Submit Quiz ✓</button>
+            </div>
+
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <div class="result-card">
+                <span class="tag">QUIZ COMPLETED</span>
+                <h1>Your Results</h1>
+
+                <div class="score-circle">
+                    <strong id="percentage">0%</strong>
+                    <small>YOUR SCORE</small>
+                </div>
+
+                <h2 id="result-message">Good effort!</h2>
+
+                <div class="result-stats">
+                    <div><strong id="total-questions">6</strong><small>Total</small></div>
+                    <div><strong id="correct-answers">0</strong><small>Correct</small></div>
+                    <div><strong id="wrong-answers">0</strong><small>Incorrect</small></div>
+                    <div><strong id="unanswered">0</strong><small>Unanswered</small></div>
+                </div>
+
+                <button id="review-btn" class="secondary-btn full-btn">Review Answers</button>
+                <button id="restart-btn" class="primary-btn full-btn">Play Again ↻</button>
+                <button id="home-btn" class="text-btn">Back to Home</button>
+            </div>
+        </section>
+
+        <!-- Review Screen -->
+        <section id="review-screen" class="screen">
+            <div class="review-header">
+                <button id="review-back-btn" class="text-btn">← Back to Results</button>
+                <h1>Answer Review</h1>
+                <p>See which answers you got right and learn from the rest.</p>
+            </div>
+
+            <div id="review-container"></div>
+
+            <button id="review-home-btn" class="primary-btn full-btn">Back to Home</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 QuizUp. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
